@@ -1,6 +1,6 @@
 {
-  "name": "Cart.com CI Starter",
+  "name": "Unified Deployments - CI Starter",
   "description": "A template for calling the reusable Unified Deployments CI workflow.",
   "iconName": "octicon beaker",
-  "categories": ["Continuous Integration", "Unified Deployments"]
+  "categories": ["Unified Deployments", "CI"]
 }
