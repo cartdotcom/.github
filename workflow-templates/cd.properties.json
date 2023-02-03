@@ -1,0 +1,6 @@
+{
+  "name": "Unified Deployments - Continuous Deployment",
+  "description": "A template for calling the reusable Unified Deployments CD workflow.",
+  "iconName": "octicon rocket",
+  "categories": ["Unified Deployments", "Continuous Deployment"]
+}

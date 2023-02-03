@@ -1,6 +1,6 @@
 {
-  "name": "Unified Deployments - CI Starter",
+  "name": "Unified Deployments - Continuous Integration",
   "description": "A template for calling the reusable Unified Deployments CI workflow.",
   "iconName": "octicon beaker",
-  "categories": ["Unified Deployments", "CI"]
+  "categories": ["Unified Deployments", "Continuous Integration"]
 }

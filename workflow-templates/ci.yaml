@@ -2,15 +2,17 @@
 # This is a starter workflow for CI pipelines in the 'cartdotcom' organization.
 # For more information about starter workflows, please visit this link:
 # https://docs.github.com/en/actions/using-workflows/using-starter-workflows
-name: CI
+name: Unified Deployments - Continuous Integration
 
 on:
   pull_request:
     branches:
       - 'main'
     paths-ignore:
+      # Add any paths or globs here that you wish this pipeline to ignore.
+      # More information about path ignoring can be found here:
+      # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-excluding-paths
       - '.github/**'
-      - 'k8s/**'
 
 jobs:
   ci:
