@@ -1,0 +1,32 @@
+# This is a starter workflow for CD pipelines in the 'cartdotcom' organization.
+# For more information about starter workflows, please visit this link:
+# https://docs.github.com/en/actions/using-workflows/using-starter-workflows
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      # Add any paths or globs here that you wish this pipeline to ignore.
+      # More information about path ignoring can be found here:
+      # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-excluding-paths
+      - '.github/**'
+
+jobs:
+  build:
+    uses: cartdotcom/unified-deployments/.github/workflows/reusable/microservice-cd-build.yaml@main
+    secrets: inherit
+
+  deploy:
+    needs: build
+    uses: cartdotcom/unified-deployments/.github/workflows/microservice-cd-deploy.yaml@main
+    secrets: inherit
+    # Be sure to view the reusable workflow above for a complete list of required inputs.
+    # These inputs can and will change over time.
+    with:
+      artifact_url: ${{ needs.build.outputs.artifact_url }}
+      values_file_path: path/to/values.yaml
+      environment: <GH_SECRETS_ENV>
+      database_name: <TERRAFORMED_DATABASE_NAME>
+      cloud: <GCP|AWS>

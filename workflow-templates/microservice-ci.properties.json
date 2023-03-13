@@ -1,0 +1,5 @@
+{
+  "name": "Microservice - CI",
+  "description": "A starter workflow for calling the reusable CI workflow.",
+  "iconName": "octicon beaker"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Microservice - CD",
+  "description": "A starter workflow for calling reusable CD workflows.",
+  "iconName": "octicon rocket"
+}

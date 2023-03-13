@@ -1,23 +1,23 @@
-# WARNING: This is a work in progress. Don't use this starter workflow yet.
 # This is a starter workflow for CI pipelines in the 'cartdotcom' organization.
 # For more information about starter workflows, please visit this link:
 # https://docs.github.com/en/actions/using-workflows/using-starter-workflows
-name: Unified Deployments - Continuous Integration
+name: CI
 
 on:
   pull_request:
     branches:
-      - 'main'
+      - main
     paths-ignore:
       # Add any paths or globs here that you wish this pipeline to ignore.
       # More information about path ignoring can be found here:
       # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-excluding-paths
-      - '.github/**'
+      - .github/**
 
 jobs:
   ci:
-   uses: cartdotcom/unified-deployments/.github/workflows/microservice-ci.yaml
-   with:
-    # Change this value to match your stack. Possible values are listed below.
-    # ['nodejs', 'python', '.NET']
-    stack: nodejs
+    uses: cartdotcom/unified-deployments/.github/workflows/microservice-ci.yaml@main
+    secrets: inherit
+    # Be sure to view the reusable workflow above for a complete list of required inputs.
+    # These inputs can and will change over time.
+    with:
+      stack: <STACK>
