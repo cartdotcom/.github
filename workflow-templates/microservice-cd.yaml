@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-    uses: cartdotcom/unified-deployments/.github/workflows/reusable/microservice-cd-build.yaml@main
+    uses: cartdotcom/unified-deployments/.github/workflows/microservice-cd-build.yaml@main
     secrets: inherit
 
   deploy:
