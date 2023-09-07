@@ -29,7 +29,6 @@ jobs:
       artifact_url: ${{ needs.build.outputs.artifact_url }}
       values_file_path: path/to/dev-values.yaml
       environment: <GH_SECRETS_ENV>
-      database_name: <TERRAFORMED_DATABASE_NAME>
       cloud: <GCP|AWS>
       
   stage:
@@ -40,7 +39,6 @@ jobs:
       artifact_url: ${{ needs.build.outputs.artifact_url }}
       values_file_path: path/to/stage-values.yaml
       environment: <GH_SECRETS_ENV>
-      database_name: <TERRAFORMED_DATABASE_NAME>
       cloud: <GCP|AWS>
       
   prod:
@@ -51,5 +49,4 @@ jobs:
       artifact_url: ${{ needs.build.outputs.artifact_url }}
       values_file_path: path/to/prod-values.yaml
       environment: <GH_SECRETS_ENV>
-      database_name: <TERRAFORMED_DATABASE_NAME>
       cloud: <GCP|AWS>
