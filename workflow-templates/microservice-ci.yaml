@@ -15,7 +15,7 @@ on:
 
 jobs:
   ci:
-    uses: cartdotcom/unified-deployments/.github/workflows/microservice-ci.yaml@main
+    uses: cartdotcom/unified-deployments/.github/workflows/test-microservice.yaml@main
     secrets: inherit
     # Be sure to view the reusable workflow above for a complete list of required inputs.
     # These inputs can and will change over time.
